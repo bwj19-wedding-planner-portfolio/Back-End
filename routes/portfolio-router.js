@@ -3,20 +3,28 @@ const router = express.Router();
 
 const db = require("../data/dbConfig.js");
 const restricted = require("../auth/restricted.js");
+const Posts = require("./portfolio-model.js");
+
+// GET posts by logged in user
 
 router.get("/", restricted, (req, res) => {
   db("posts")
     .returning("id")
     .where({ user_id: req.decodedToken.subject })
     .then(posts => {
-      res.status(200).json(posts);
+      res.status(200).json({
+        message: "Success",
+        posts});
     })
     .catch(error => {
       res.status(500).json({ error: "The posts could not be retrieved." });
     });
 });
 
-router.get("/all", (req, res) => {
+// GET all posts
+
+router.get("/all", async (req, res) => {
+
   db("posts")
     .returning("id")
     .then(posts => {
@@ -26,6 +34,8 @@ router.get("/all", (req, res) => {
       res.status(500).json({ error: "The posts could not be retrieved." });
     });
 });
+
+// GET posts by ID
 
 router.get("/:id", restricted, (req, res) => {
   const { id } = req.params;
@@ -50,9 +60,11 @@ router.get("/:id", restricted, (req, res) => {
     });
 });
 
+// POST a new post for logged in user
+
 router.post("/", restricted, (req, res) => {
   const post = req.body;
-
+  console.log(req.body)
   if (!post.couple_name) {
     res
       .status(400)
@@ -69,7 +81,9 @@ router.post("/", restricted, (req, res) => {
           .where({ id })
           .first()
           .then(post => {
-            res.status(201).json(post);
+            res.status(201).json({
+              message: 'Success',
+              post});
           });
       })
       .catch(error => {
@@ -80,11 +94,13 @@ router.post("/", restricted, (req, res) => {
   }
 });
 
-router.put("/:id", restricted, (req, res) => {
+// PUT changes to post by logged in user
+
+router.put("/:id", restricted, async (req, res) => {
   const { id } = req.params;
   const changes = req.body;
-
-  if (!changes.item_name) {
+  
+  if (!changes) {
     res.status(400).json({
       error: "Please provide a name for the post."
     });
@@ -95,7 +111,9 @@ router.put("/:id", restricted, (req, res) => {
       .returning("id")
       .then(count => {
         if (count > 0) {
-          res.status(200).json(count);
+          res.status(200).json({
+            message: 'Successfully Updated Post',
+            id});
         } else {
           res.status(404).json({
             error: "You cannot access the post with this specific id."
@@ -110,6 +128,8 @@ router.put("/:id", restricted, (req, res) => {
   }
 });
 
+// DELETE post for logged in user
+
 router.delete("/:id", restricted, (req, res) => {
   const { id } = req.params;
   db("posts")
@@ -118,7 +138,9 @@ router.delete("/:id", restricted, (req, res) => {
     .returning("id")
     .then(count => {
       if (count > 0) {
-        res.status(200).json(count);
+        res.status(200).json({
+          message: 'Successfully Deleted Post',
+          id});
       } else {
         res
           .status(404)

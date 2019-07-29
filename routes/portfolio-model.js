@@ -3,7 +3,8 @@ const db = require("../data/dbConfig.js");
 module.exports = {
   getAllPosts,
   insert,
-  addPost
+  addPost,
+  update,
 };
 
 function getAllPosts() {
@@ -24,4 +25,8 @@ function findPostById(id) {
   return db("posts")
     .where({ id })
     .first();
+}
+
+function update(id, changes) {
+  return db("posts").where({ id }).update(changes);
 }
