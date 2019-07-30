@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
       location: "Boston, Massachusetts",
       description: "Daniel Westbrook",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -21,7 +21,7 @@ exports.seed = function(knex, Promise) {
       location: "San Diego, CA",
       description: "Katherine Vogel",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -33,7 +33,7 @@ exports.seed = function(knex, Promise) {
       location: "Austin, TX",
       description: "Lucy Hale",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -45,7 +45,7 @@ exports.seed = function(knex, Promise) {
       location: "Colonie, NY",
       description: "Tim Horton",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -57,7 +57,7 @@ exports.seed = function(knex, Promise) {
       location: "Seattle, WA",
       description: "John Stamos",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -69,7 +69,7 @@ exports.seed = function(knex, Promise) {
       location: "Los Angelos, CA",
       description: "Linda Selby",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -81,7 +81,7 @@ exports.seed = function(knex, Promise) {
       location: "Denver, CO",
       description: "Jameson Armstrong",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -93,7 +93,7 @@ exports.seed = function(knex, Promise) {
       location: "Manhattan, NY",
       description: "Joshua Samus",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     },
     {
@@ -105,7 +105,7 @@ exports.seed = function(knex, Promise) {
       location: "Boston, MA",
       description: "Candace Lindsale",
       vendors: "test",
-      user_id: 6,
+      user_id: 2,
       username: "jefftest"
     }
   ]);
