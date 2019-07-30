@@ -27,18 +27,17 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
-    connection: {
-      database: 'weddings.db3',
-      user:     'username',
-      password: 'password'
-    },
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
     pool: {
       afterCreate: (conn, done) => {
         conn.run('PRAGMA foreign_keys = ON', done);
       },
     migrations: {
       directory: "./data/migrations"
+    },
+    seeds: {
+      directory: './data/seeds'
     }
   }
   }
