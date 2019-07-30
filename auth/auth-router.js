@@ -10,7 +10,7 @@ const db = require("../data/dbConfig");
 router.post("/register", (req, res) => {
   const user = req.body;
 
-  if (!user.firstName || !user.lastName || !user.username || !user.password) {
+  if (!user.firstName || !user.lastName || !user.username || !user.password || !user.email || !user.location) {
     res.status(400).json({
       error: "Please fill out all of the fields"
     });
@@ -62,7 +62,7 @@ router.post("/login", (req, res) => {
           const token = tokens.generateToken(user);
           res
             .status(200)
-            .json({ message: `${user.username} is logged in.`, token });
+            .json({ message: `Welcome ${user.username}`, token });
         } else {
           res.status(401).json({
             error: "Please provide the correct username and password."

@@ -31,10 +31,28 @@ module.exports = {
     connection: process.env.DATABASE_URL,
     useNullAsDefault: true,
     migrations: {
-      directory: "./data/migrations"
+      directory: "./migrations"
     },
     seeds: {
-      directory: './data/seeds'
+      directory: './seeds'
     }
   }
 };
+
+// production: {
+//   client: 'pg',
+//   connection: process.env.DATABASE_URL,
+//   useNullAsDefault: true,
+//   pool: {
+//     afterCreate: (conn, done) => {
+//       conn.run('PRAGMA foreign_keys = ON', done);
+//     },
+//   migrations: {
+//     directory: "./migrations"
+//   },
+//   seeds: {
+//     directory: './seeds'
+//   }
+// }
+// }
+// };

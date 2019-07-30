@@ -6,8 +6,8 @@ exports.up = function(knex) {
       posts.string("wedding_theme", 255);
       posts.string("wedding_date", 255);
       posts.string("photo", 255);
-      posts.string("wedding_location");
-      posts.string("description");
+      posts.string("location", 255);
+      posts.string("description", 255);
       posts.string("vendors");
   
       posts
@@ -15,6 +15,15 @@ exports.up = function(knex) {
         .unsigned()
         .notNullable()
         .references("id")
+        .inTable("users")
+        .onDelete("CASCADE")
+        .onUpdate("CASCADE");
+
+        posts
+        .integer("firstName")
+        .unsigned()
+        .notNullable()
+        .references("firstName")
         .inTable("users")
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
