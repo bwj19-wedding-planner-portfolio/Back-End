@@ -12,7 +12,7 @@ function getAllPosts() {
 }
 
 function insert(post) {
-  return db("posts").insert(post);
+  return db("posts").insert(post, 'id');
 }
 
 async function addPost(post) {
