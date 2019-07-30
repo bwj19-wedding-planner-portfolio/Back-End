@@ -20,7 +20,7 @@ exports.up = function(knex) {
         .onUpdate("CASCADE");
 
         posts
-        .integer("username")
+        .string("username")
         .unsigned()
         .notNullable()
         .references("username")
