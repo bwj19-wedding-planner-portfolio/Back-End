@@ -20,10 +20,10 @@ exports.up = function(knex) {
         .onUpdate("CASCADE");
 
         posts
-        .integer("firstName")
+        .integer("username")
         .unsigned()
         .notNullable()
-        .references("firstName")
+        .references("username")
         .inTable("users")
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
