@@ -5,6 +5,7 @@ module.exports = {
   insert,
   addPost,
   update,
+  findPostsByUsername
 };
 
 function getAllPosts() {
@@ -25,6 +26,24 @@ function findPostById(id) {
   return db("posts")
     .where({ id })
     .first();
+}
+
+function findPostsByUsername(id) {
+  return db('posts as p')
+    .join('users as u', 'u.id', 'p.user_id')
+    .select(
+      'p.id',
+      'p.couple_name',
+      'p.wedding_theme',
+      'p.wedding_date',
+      'p.photo',
+      'p.location',
+      'p.description',
+      'p.vendors',
+      'p.user_id',
+      'u.username',
+    )
+    .where('u.id', id);
 }
 
 function update(id, changes) {

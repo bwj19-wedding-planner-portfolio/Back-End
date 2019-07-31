@@ -7,7 +7,18 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1510076857177-7470076d4098?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
       location: "Boston, Massachusetts",
-      description: "Daniel Westbrook",
+      planner: "Daniel Westbrook",
+      vendors: "test",
+      user_id: 2,
+    },
+    {
+      couple_name: "Eric & Samantha's Wedding",
+      wedding_theme: "Mountain",
+      wedding_date: "2019-04-20",
+      photo:
+        "https://images.unsplash.com/photo-1546193430-c2d207739ed7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1978&q=80",
+      location: "San Jose, CA",
+      planner: "Katherine Vogel",
       vendors: "test",
       user_id: 2,
     },
@@ -18,7 +29,18 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1546193430-c2d207739ed7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1978&q=80",
       location: "San Diego, CA",
-      description: "Katherine Vogel",
+      planner: "Katherine Vogel",
+      vendors: "test",
+      user_id: 2,
+    },
+    {
+      couple_name: "Eric & Samantha's Wedding",
+      wedding_theme: "Western",
+      wedding_date: "2019-04-20",
+      photo:
+        "https://images.unsplash.com/photo-1546193430-c2d207739ed7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1978&q=80",
+      location: "Carlsbad, CA",
+      planner: "Katherine Vogel",
       vendors: "test",
       user_id: 2,
     },
@@ -29,7 +51,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1522057384400-681b421cfebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       location: "Austin, TX",
-      description: "Lucy Hale",
+      planner: "Lucy Hale",
       vendors: "test",
       user_id: 2,
     },
@@ -40,7 +62,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1475714622877-641e013c6096?ixlib=rb-1.2.1&auto=format&fit=crop&w=1346&q=80",
       location: "Colonie, NY",
-      description: "Tim Horton",
+      planner: "Tim Horton",
       vendors: "test",
       user_id: 2,
     },
@@ -51,7 +73,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1482482097755-0b595893ba63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       location: "Seattle, WA",
-      description: "John Stamos",
+      planner: "John Stamos",
       vendors: "test",
       user_id: 2,
     },
@@ -62,7 +84,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1527578400122-85bbbb91d53c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       location: "Los Angelos, CA",
-      description: "Linda Selby",
+      planner: "Linda Selby",
       vendors: "test",
       user_id: 2,
     },
@@ -73,7 +95,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1509610973147-232dfea52a97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       location: "Denver, CO",
-      description: "Jameson Armstrong",
+      planner: "Jameson Armstrong",
       vendors: "test",
       user_id: 2,
     },
@@ -84,7 +106,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1513278974582-3e1b4a4fa21e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       location: "Manhattan, NY",
-      description: "Joshua Samus",
+      planner: "Joshua Samus",
       vendors: "test",
       user_id: 2,
     },
@@ -95,7 +117,7 @@ exports.seed = function(knex, Promise) {
       photo:
         "https://images.unsplash.com/photo-1522333323-32663f141b57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
       location: "Boston, MA",
-      description: "Candace Lindsale",
+      planner: "Candace Lindsale",
       vendors: "test",
       user_id: 2,
     }

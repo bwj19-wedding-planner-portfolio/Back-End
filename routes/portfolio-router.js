@@ -60,11 +60,13 @@ router.get("/:id", restricted, (req, res) => {
     });
 });
 
+
 // POST a new post for logged in user
 
-router.post("/", restricted, (req, res) => {
+router.post("/", restricted, async (req, res) => {
   const post = req.body;
   console.log(req.body)
+
   if (!post.couple_name) {
     res
       .status(400)
