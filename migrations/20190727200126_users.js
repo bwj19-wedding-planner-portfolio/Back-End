@@ -8,7 +8,6 @@ exports.up = function(knex) {
   
       table
         .string("username", 128)
-        
         .unique();
   
       table.string("password", 128);

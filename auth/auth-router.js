@@ -29,8 +29,8 @@ router.post("/register", (req, res) => {
             const token = tokens.generateToken(user);
             res
               .status(201)
-              .json({ username });
-              // .json({ id: user.id, username: user.username, token });
+              // .json({ username, token });
+              .json({ id: user.id, username: user.username, token });
           })
           .catch(error => {
             res.status(500).json({
@@ -63,8 +63,8 @@ router.post("/login", (req, res) => {
           const token = tokens.generateToken(user);
           res
             .status(200)
-            .json({ username });
-            // .json({ message: `Welcome ${user.username}`, token });
+            // .json({ username });
+            .json({ message: `${user.username}`, token });
         } else {
           res.status(401).json({
             error: "Please provide the correct username and password."

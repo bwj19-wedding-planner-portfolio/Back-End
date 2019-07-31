@@ -7,6 +7,12 @@ module.exports = {
     useNullAsDefault: true,
     connection: {
       filename: './data/weddings.db3'
+    },
+    migrations: {
+      directory: './migrations'
+    },
+    seeds: {
+      directory: './seeds'
     }
   },
 
@@ -22,7 +28,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directory: './data/migrations'
+      directory: './migrations'
     }
   },
 

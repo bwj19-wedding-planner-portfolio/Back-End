@@ -10,7 +10,6 @@ exports.seed = function(knex, Promise) {
       description: "Daniel Westbrook",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Eric & Samantha's Wedding",
@@ -22,7 +21,6 @@ exports.seed = function(knex, Promise) {
       description: "Katherine Vogel",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Mitsuki & Takao's Wedding",
@@ -34,7 +32,6 @@ exports.seed = function(knex, Promise) {
       description: "Lucy Hale",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Sam & Alice's Wedding",
@@ -46,7 +43,6 @@ exports.seed = function(knex, Promise) {
       description: "Tim Horton",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Kate & Kristen's Wedding",
@@ -58,7 +54,6 @@ exports.seed = function(knex, Promise) {
       description: "John Stamos",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Josh & Amanda's Wedding",
@@ -70,7 +65,6 @@ exports.seed = function(knex, Promise) {
       description: "Linda Selby",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Daniel & Lucy's Wedding",
@@ -82,7 +76,6 @@ exports.seed = function(knex, Promise) {
       description: "Jameson Armstrong",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Cynthia & Christina's Wedding",
@@ -94,7 +87,6 @@ exports.seed = function(knex, Promise) {
       description: "Joshua Samus",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     },
     {
       couple_name: "Sumiko & Ryosuke's Wedding",
@@ -106,7 +98,6 @@ exports.seed = function(knex, Promise) {
       description: "Candace Lindsale",
       vendors: "test",
       user_id: 2,
-      username: "jefftest"
     }
   ]);
 };

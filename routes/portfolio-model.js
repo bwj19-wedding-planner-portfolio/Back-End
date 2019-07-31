@@ -12,11 +12,11 @@ function getAllPosts() {
 }
 
 function insert(post) {
-  return db("posts").insert(post, 'id');
+  return db("posts").insert(post);
 }
 
 async function addPost(post) {
-  const [id] = await db("posts").insert(post, "id");
+  const [id] = await db("posts").insert(post);
 
   return findPostById(id);
 }

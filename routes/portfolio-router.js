@@ -87,6 +87,7 @@ router.post("/", restricted, (req, res) => {
           });
       })
       .catch(error => {
+        console.log(error)
         res.status(500).json({
           error: "There was an error while saving the post to the database."
         });

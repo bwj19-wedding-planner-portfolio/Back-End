@@ -18,15 +18,6 @@ exports.up = function(knex) {
         .inTable("users")
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
-
-        posts
-        .string("username")
-        .unsigned()
-        .notNullable()
-        .references("username")
-        .inTable("users")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
     });
   };
   
